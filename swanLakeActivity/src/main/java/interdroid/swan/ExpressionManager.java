@@ -285,6 +285,7 @@ public class ExpressionManager {
 	public static void registerValueExpression(Context context, String id,
 			ValueExpression expression, final ValueExpressionListener listener)
 			throws SwanException {
+
 		if (listener == null) {
 			registerExpression(context, id, expression, null);
 		} else {
@@ -433,6 +434,7 @@ public class ExpressionManager {
 		intent.putExtra("onFalse", onFalse);
 		intent.putExtra("onUndefined", onUndefined);
 		intent.putExtra("onNewValues", onNewValues);
+		Log.e("Roshan","ExpressionManager expression"+expression.toParseString());
 		context.sendBroadcast(intent);
 	}
 

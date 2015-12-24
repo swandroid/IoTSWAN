@@ -4,6 +4,7 @@ import interdroid.swan.R;
 import interdroid.swan.sensors.AbstractConfigurationActivity;
 import interdroid.swan.sensors.AbstractSwanSensor;
 
+import java.util.HashMap;
 import java.util.List;
 
 import android.content.Context;
@@ -35,6 +36,9 @@ public class LightSensor extends AbstractSwanSensor {
 
 	/** Value of ACCURACY must be one of SensorManager.SENSOR_DELAY_* */
 	public static final String ACCURACY = "accuracy";
+
+	//ServerConnection serverConnection;
+
 
 	public static final String LUX_FIELD = "lux";
 
@@ -81,7 +85,10 @@ public class LightSensor extends AbstractSwanSensor {
 	}
 
 	@Override
-	public final void register(String id, String valuePath, Bundle configuration, final Bundle httpConfiguration) {
+	public final void register(String id, String valuePath, Bundle configuration, Bundle httpConfiguration) {
+
+		super.register(id,valuePath,configuration,httpConfiguration);
+
 		updateAccuracy();
 	}
 

@@ -27,12 +27,21 @@
             android:title="Server URL" />
 
         <ListPreference
+            android:defaultValue="null"
+            android:entries="@array/http_body_type"
+            android:entryValues="@array/http_body_type"
+            android:key="server_http_body_type"
+            android:summary="The http body type for connecting to server "
+            android:title="Http Request Body Type" />
+
+        <ListPreference
             android:defaultValue="GET"
             android:entries="@array/http_method"
             android:entryValues="@array/http_method"
             android:key="server_http_method"
             android:summary="The http request method for connecting to server "
             android:title="Http Request Method(GET/POST/PUT/DELETE)" />
+
 
         <ListPreference
             android:defaultValue="NoAuth"
@@ -50,12 +59,12 @@
             android:summary="The http request header for connecting to server"
             android:title="Http Header" />
 
-        <ListPreference
+        <EditTextPreference
             android:defaultValue="null"
-            android:entries="@array/http_body"
-            android:entryValues="@array/http_body"
+            android:dialogTitle="Server HTTP Body"
+            android:inputType="textWebEditText"
             android:key="server_http_body"
-            android:summary="The http request body for PUT, POST method to server "
+            android:summary="The http request body for PUT, POST method to server"
             android:title="Http Body(for POST/PUT)" />
 
     </PreferenceCategory>

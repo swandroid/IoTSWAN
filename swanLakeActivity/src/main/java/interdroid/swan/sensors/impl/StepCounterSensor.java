@@ -43,8 +43,8 @@ public class StepCounterSensor extends AbstractSwanSensor implements SensorEvent
 	public static final String STEP_COUNTER = "step_counter";
 
 	@Override
-	public void register(String id, String valuePath, Bundle configuration, final Bundle httpConfiguration)
-			throws IOException {
+	public void register(String id, String valuePath, Bundle configuration, final Bundle httpConfiguration){
+			//throws IOException {
 		updateAccuracy();
 	}
 	

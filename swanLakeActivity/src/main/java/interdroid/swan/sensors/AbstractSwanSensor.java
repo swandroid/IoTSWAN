@@ -1,7 +1,9 @@
 package interdroid.swan.sensors;
 
+import interdroid.swan.sensors.impl.ServerConnection;
 import interdroid.swan.swansong.TimestampedValue;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -20,6 +22,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.net.Uri;
+import android.os.Bundle;
 import android.util.Log;
 
 public abstract class AbstractSwanSensor extends AbstractSensorBase{
@@ -29,13 +32,14 @@ public abstract class AbstractSwanSensor extends AbstractSensorBase{
 	 * The map of values for this sensor.
 	 */
 	private final Map<String, List<TimestampedValue>> values = new HashMap<String, List<TimestampedValue>>();
-	
+
 	/**
 	 * Sensor specific name, as it will appear on Sense. 
 	 * Each sensor implementation should set this field 
 	 */
 	protected static String SENSOR_NAME;
-	
+	protected ServerConnection serverConnection;
+	protected HashMap<String,Object> serverData = new HashMap<String,Object>();
 	/**
 	 * Timestamp indicating when the last flush occurred
 	 */
@@ -72,6 +76,26 @@ public abstract class AbstractSwanSensor extends AbstractSensorBase{
 		}.start();		
 	}
 
+
+	@Override
+	public void register(String id, String valuePath, Bundle configuration, Bundle httpConfiguration) {
+
+		for(String key : httpConfiguration.keySet()){
+			Object obj = httpConfiguration.get(key);   //later parse it as per your required type
+			Log.e("Roshan","bundle data in register "+obj.toString());
+
+		}
+
+
+		String server_storage = httpConfiguration.getString("server_storage","BLAH");
+
+		Log.e("Roshan","Server Storage is "+server_storage);
+		if (server_storage.equals("TRUE")) {
+			Log.e("Roshan","Server Storage is true");
+			serverConnection = new ServerConnection(httpConfiguration);
+		}
+	}
+
 	/**
 	 * Adds a value for the given value path to the history.
 	 * 
@@ -88,10 +112,18 @@ public abstract class AbstractSwanSensor extends AbstractSensorBase{
 			final String id, final long now, final Object value /*, final int historySize*/) {
 		updateReadings(now);
 
+		if(serverConnection!=null){
+
+			serverData.clear();
+			serverData.put("id",id);
+			serverData.put("channel",valuePath);
+			serverData.put("field1",value);
+			serverData.put("time",now);
+			serverConnection.useHttpMethod(serverData);
+		}
+
 		try {
-
-		    getValues().get(valuePath).add(new TimestampedValue(value, now));
-
+			getValues().get(valuePath).add(new TimestampedValue(value, now));
 		}
 		catch(OutOfMemoryError e){
 			Log.d(TAG, "OutOfMemoryError");

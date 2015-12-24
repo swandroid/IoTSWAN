@@ -238,7 +238,7 @@ public abstract class AbstractConfigurationActivity extends PreferenceActivity
 			}
 			if (summary != null) {
 				preference.setSummary(summary);
-				Log.e("Roshan", summary);
+				//Log.e("Roshan", summary);
 			}
 
 			if (preference instanceof ListPreference) {
@@ -323,27 +323,26 @@ public abstract class AbstractConfigurationActivity extends PreferenceActivity
 		if (map.containsKey("server_http_body")) {
 			httpConfiguration.putString("server_http_body", map.remove("server_http_body").toString());
 		}
+		if (map.containsKey("server_http_body_type")) {
+			httpConfiguration.putString("server_http_body_type", map.remove("server_http_body_type").toString());
+		}
 
-
-
-
-
-//		String storage = map.remove("storage").toString();
-//		Log.d(TAG, "Selected storage: " + storage);
-//		Log.d(TAG, storage);
-//		setSelectedStorage(storage);
 		String entityId = getIntent().getStringExtra("entityId");
-		Log.e("Roshan",entityId);
+		//Log.e("Roshan",entityId);
 		Bundle configuration = new Bundle();
 		for (String key : keys) {
 
 			if (map.containsKey(key)) {
-				Log.e("Roshan",map.get(key).toString());
+				//Log.e("Roshan",map.get(key).toString());
 				configuration.putString(key, map.get(key).toString());
 			}
 		}
 
+		for(String key: httpConfiguration.keySet()){
+			String value = "" + httpConfiguration.get(key);
+			Log.e("Roshan","AbstractConfigurationActivity key "+key +" value " +value);
 
+		}
 
 		SensorValueExpression sensor = new SensorValueExpression(location,
 				entityId, path, configuration, mode, timespan, httpConfiguration);

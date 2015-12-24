@@ -109,7 +109,7 @@ public class ServerSensor extends AbstractSwanSensor {
     }
 
     @Override
-    public void register(String id, String valuePath, Bundle configuration, final Bundle httpConfiguration) throws IOException {
+    public void register(String id, String valuePath, Bundle configuration, final Bundle httpConfiguration) {//throws IOException {
 
 
         ServerPoller serverPoller = new ServerPoller(id, valuePath,

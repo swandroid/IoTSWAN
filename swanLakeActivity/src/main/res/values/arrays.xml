@@ -79,6 +79,12 @@
         <item>TRUE</item>
     </string-array>
 
+    <string-array name="http_body_type">
+        <item>null</item>
+        <item>formdata</item>
+        <item>application/json</item>
+    </string-array>
+
 
     <string-array name="http_method">
         <item>GET</item>
@@ -104,13 +110,6 @@
         <item>0Auth 2.0</item>
     </string-array>
 
-    <string-array name="http_body">
-        <item>null</item>
-        <item>form-data</item>
-        <item>x-www-form-urlencoded</item>
-        <item>raw</item>
-        <item>binary</item>
-    </string-array>
 
    <!-- battery sensor -->
     <string-array name="battery_valuepaths">
