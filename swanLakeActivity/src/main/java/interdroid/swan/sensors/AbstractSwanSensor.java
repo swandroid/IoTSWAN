@@ -17,6 +17,10 @@ import nl.sense_os.service.constants.SenseDataTypes;
 import nl.sense_os.service.constants.SensePrefs;
 import nl.sense_os.service.constants.SensorData.DataPoint;
 import nl.sense_os.service.storage.LocalStorage;
+import retrofit.Callback;
+import retrofit.RetrofitError;
+import retrofit.client.Response;
+
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -40,6 +44,17 @@ public abstract class AbstractSwanSensor extends AbstractSensorBase{
 	protected static String SENSOR_NAME;
 	protected ServerConnection serverConnection;
 	protected HashMap<String,Object> serverData = new HashMap<String,Object>();
+	protected Callback<Object> cb = new Callback<Object>() {
+		@Override
+		public void success(Object o, Response response) {
+
+		}
+
+		@Override
+		public void failure(RetrofitError error) {
+
+		}
+	};
 	/**
 	 * Timestamp indicating when the last flush occurred
 	 */
@@ -116,10 +131,10 @@ public abstract class AbstractSwanSensor extends AbstractSensorBase{
 
 			serverData.clear();
 			serverData.put("id",id);
-			serverData.put("channel",valuePath);
+			//serverData.put("channel",valuePath);
 			serverData.put("field1",value);
 			serverData.put("time",now);
-			serverConnection.useHttpMethod(serverData);
+			serverConnection.useHttpMethod(serverData,cb);
 		}
 
 		try {

@@ -6,33 +6,14 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="DEBUG" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+    <option name="TOOL_WINDOW_REGEXP_FILTER" value="false" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4c050aa-5a98-4801-8c88-63cfeadde53e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/sensors/AbstractConfigurationActivity.java" afterPath="$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/sensors/AbstractConfigurationActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/sensors/AbstractCuckooSensor.java" afterPath="$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/sensors/AbstractCuckooSensor.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/sensors/AbstractSwanSensor.java" afterPath="$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/sensors/AbstractSwanSensor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/swanLakeActivity/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/swanLakeActivity/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/sensors/impl/BatterySensor.java" afterPath="$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/sensors/impl/BatterySensor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/swansong/ExpressionFactory.java" afterPath="$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/swansong/ExpressionFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/ExpressionManager.java" afterPath="$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/ExpressionManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/sensors/impl/LightSensor.java" afterPath="$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/sensors/impl/LightSensor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/sensors/impl/OVSensor.java" afterPath="$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/sensors/impl/OVSensor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/sensors/impl/PolarHeartRate.java" afterPath="$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/sensors/impl/PolarHeartRate.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/swansong/SensorValueExpression.java" afterPath="$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/swansong/SensorValueExpression.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/sensors/impl/ServerConnection.java" afterPath="$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/sensors/impl/ServerConnection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/sensors/impl/ServerSensor.java" afterPath="$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/sensors/impl/ServerSensor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/sensors/impl/ServerSensor1.java" afterPath="$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/sensors/impl/ServerSensor1.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/sensors/impl/StepCounterSensor.java" afterPath="$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/sensors/impl/StepCounterSensor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/sensors/impl/StepDetectorSensor.java" afterPath="$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/sensors/impl/StepDetectorSensor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/swanLakeActivity/SwanExpression.g" afterPath="$PROJECT_DIR$/swanLakeActivity/SwanExpression.g" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/swansong/SwanExpressionLexer.java" afterPath="$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/swansong/SwanExpressionLexer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/swansong/SwanExpressionParser.java" afterPath="$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/swansong/SwanExpressionParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/swanLakeActivity/src/main/res/values/arrays.xml" afterPath="$PROJECT_DIR$/swanLakeActivity/src/main/res/values/arrays.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/swanLakeActivity/build.gradle" afterPath="$PROJECT_DIR$/swanLakeActivity/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/swanLakeActivity/src/main/res/xml/default_preferences.xml" afterPath="$PROJECT_DIR$/swanLakeActivity/src/main/res/xml/default_preferences.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/swanLakeActivity/swanLakeActivity.iml" afterPath="$PROJECT_DIR$/swanLakeActivity/swanLakeActivity.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="IoTSWAN.iws" />
@@ -54,6 +35,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="AbstractSwanSensor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/sensors/AbstractSwanSensor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="133" column="14" selection-start-line="133" selection-start-column="14" selection-end-line="133" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ServerConnection.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/sensors/impl/ServerConnection.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="1.3647417">
+              <caret line="189" column="0" selection-start-line="189" selection-start-column="0" selection-end-line="189" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AbstractSensorBase.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/sensors/AbstractSensorBase.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="127" column="20" selection-start-line="127" selection-start-column="20" selection-end-line="127" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="AbstractConfigurationActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/sensors/AbstractConfigurationActivity.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -62,16 +73,6 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/sense/LoginActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="227" column="18" selection-start-line="227" selection-start-column="18" selection-end-line="227" selection-end-column="18" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -86,10 +87,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SensorValueExpression.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LightSensor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/sensors/impl/LightSensor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="87" column="82" selection-start-line="87" selection-start-column="82" selection-end-line="87" selection-end-column="82" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SensorValueExpression.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/swansong/SensorValueExpression.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.50782996">
+            <state vertical-scroll-proportion="0.0">
               <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
               <folding>
                 <element signature="e#1017#1018#0" expanded="true" />
@@ -129,36 +140,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="1726" column="7" selection-start-line="1726" selection-start-column="7" selection-end-line="1726" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Expression.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/swansong/Expression.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ExpressionFactory.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/swansong/ExpressionFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="6" column="34" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Object.java" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-22/java/lang/Object.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="352" column="18" selection-start-line="352" selection-start-column="18" selection-end-line="352" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -2786,15 +2767,15 @@
         <option value="$PROJECT_DIR$/swanLakeActivity/src/main/res/xml/default_preferences.xml" />
         <option value="$PROJECT_DIR$/swanLakeActivity/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/swanLakeActivity/build.gradle" />
-        <option value="$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/sensors/impl/ServerConnection.java" />
         <option value="$PROJECT_DIR$/swanLakeActivity/src/main/res/values/arrays.xml" />
-        <option value="$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/sensors/AbstractSwanSensor.java" />
         <option value="$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/sensors/impl/LightSensor.java" />
         <option value="$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/sensors/AbstractConfigurationActivity.java" />
         <option value="$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/swansong/ExpressionFactory.java" />
         <option value="$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/ExpressionManager.java" />
         <option value="$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/swansong/SwanExpressionParser.java" />
         <option value="$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/swansong/SensorValueExpression.java" />
+        <option value="$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/sensors/AbstractSwanSensor.java" />
+        <option value="$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/sensors/impl/ServerConnection.java" />
       </list>
     </option>
   </component>
@@ -2802,8 +2783,9 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1440" />
-    <option name="height" value="900" />
+    <option name="x" value="1440" />
+    <option name="width" value="1920" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -2924,6 +2906,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IoTSWAN" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="swanLakeActivity" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="interdroid" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="swan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="swansong" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -2976,7 +2984,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="engine" />
+              <option name="myItemId" value="sensors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="impl" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -3206,7 +3218,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="1440" y="0" width="1920" height="1080" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -3216,22 +3228,22 @@
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38539553" sideWeight="0.78434503" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.41066998" sideWeight="0.79041487" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.63793105" sideWeight="0.7880724" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38833746" sideWeight="0.84191704" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.41066998" sideWeight="0.20958512" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.63793105" sideWeight="0.21192758" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23200993" sideWeight="0.49713877" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23123732" sideWeight="0.49520767" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22818312" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19116081" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3126551" sideWeight="0.66809726" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -3379,13 +3391,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/sensors/AbstractSensorBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="127" column="20" selection-start-line="127" selection-start-column="20" selection-end-line="127" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/swanLakeActivity/src/main/res/values/arrays.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -3410,25 +3415,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/sensors/AbstractSwanSensor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="83" column="44" selection-start-line="83" selection-start-column="44" selection-end-line="83" selection-end-column="44" />
-          <folding>
-            <element signature="e#1688#1689#0" expanded="false" />
-            <element signature="e#1708#1709#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/sensors/impl/LightSensor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="87" column="82" selection-start-line="87" selection-start-column="82" selection-end-line="87" selection-end-column="82" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/sensors/impl/ServerAPI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -3441,14 +3427,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/sensors/impl/ServerConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="108" column="42" selection-start-line="108" selection-start-column="42" selection-end-line="108" selection-end-column="42" />
           <folding />
         </state>
       </provider>
@@ -3706,8 +3684,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="4658" column="16" selection-start-line="4658" selection-start-column="16" selection-end-line="4658" selection-end-column="16" />
           <folding>
-            <element signature="e#198008#198009#0" expanded="true" />
-            <element signature="e#198037#198038#0" expanded="true" />
+            <element signature="e#198008#198009#0" expanded="false" />
+            <element signature="e#198037#198038#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -3787,16 +3765,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/sensors/AbstractConfigurationActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="276" column="27" selection-start-line="276" selection-start-column="18" selection-end-line="276" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/swansong/SwanExpression.tokens">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -3807,7 +3775,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/swansong/SensorValueExpression.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50782996">
+        <state vertical-scroll-proportion="0.0">
           <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
           <folding>
             <element signature="e#1017#1018#0" expanded="true" />
@@ -3815,6 +3783,48 @@
             <element signature="e#1071#1072#0" expanded="true" />
             <element signature="e#1099#1100#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/sensors/AbstractConfigurationActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="276" column="27" selection-start-line="276" selection-start-column="18" selection-end-line="276" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/sensors/AbstractSensorBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="127" column="20" selection-start-line="127" selection-start-column="20" selection-end-line="127" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/sensors/impl/LightSensor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="87" column="82" selection-start-line="87" selection-start-column="82" selection-end-line="87" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/sensors/AbstractSwanSensor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="133" column="14" selection-start-line="133" selection-start-column="14" selection-end-line="133" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swanLakeActivity/src/main/java/interdroid/swan/sensors/impl/ServerConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.3647417">
+          <caret line="189" column="0" selection-start-line="189" selection-start-column="0" selection-end-line="189" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

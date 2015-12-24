@@ -56,30 +56,30 @@ public class ServerConnection {
         //void postData(@Body TypedInput body);
 
         @POST("/")
-        void postData(@Body String body);
+        void postData(@Body String body, Callback<Object> cb);
 
 
         @POST("/")
-        void postJSON(@Body HashMap<String, Object> body);
+        void postJSON(@Body HashMap<String, Object> body, Callback<Object> cb);
 
 
         @FormUrlEncoded
         @POST("/")
         void postFormData(
-                @FieldMap Map<String, Object> formParams
+                @FieldMap Map<String, Object> formParams, Callback<Object> cb
         );
 
         @PUT("/")
-        void putJSON(@Body HashMap<String, Object> body);
+        void putJSON(@Body HashMap<String, Object> body, Callback<Object> cb);
 
         @FormUrlEncoded
         @PUT("/")
         void putFormData(
-                @FieldMap Map<String, Object> formParams
+                @FieldMap Map<String, Object> formParams, Callback<Object> cb
         );
 
         @PUT("/")
-        void putData(@Body String body);
+        void putData(@Body String body, Callback<Object> cb);
 
 
     }
@@ -149,17 +149,24 @@ public class ServerConnection {
     }
 
 
-    public void useHttpMethod(HashMap<String,Object> hashData){
+    public void useHttpMethod(HashMap<String,Object> hashData, Callback<Object> cb){
+
 
         hashData.putAll(httpBody);
+
+        for (String key : hashData.keySet()) {
+            Log.e("Roshan","final hashData "+key+":"+hashData.get(key));
+        }
+
 
         if(serverHttpBodyType.equals("formdata")){
 
             if(serverHttpMethod.equals("POST")) {
-                service.postFormData(hashData);
+                service.postFormData(hashData,cb);
             }
             else if(serverHttpMethod.equals("PUT")){
-                service.putFormData(hashData);
+
+                service.putFormData(hashData, cb);
             }
 
         }
@@ -167,10 +174,10 @@ public class ServerConnection {
         else if(serverHttpBodyType.equals("application/json")){
 
             if(serverHttpMethod.equals("POST")) {
-                service.postJSON(hashData);
+                service.postJSON(hashData,cb);
             }
             else if(serverHttpMethod.equals("PUT")){
-                service.putJSON(hashData);
+                service.putJSON(hashData,cb);
             }
 
         }
@@ -180,16 +187,18 @@ public class ServerConnection {
         //}
 
 
+
+
     }
 
 
-    public void useHttpMethod(String body){
+    public void useHttpMethod(String body, Callback<Object> cb){
 
             if(serverHttpMethod.equals("POST")) {
-                service.postData(body);
+                service.postData(body,cb);
             }
             else if(serverHttpMethod.equals("PUT")){
-                service.putData(body);
+                service.putData(body,cb);
             }
    }
 
