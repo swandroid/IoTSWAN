@@ -57,6 +57,7 @@ public class GyroscopeSensor extends AbstractSwanSensor {
 			long now = System.currentTimeMillis();
 			if (event.sensor.getType() == Sensor.TYPE_GYROSCOPE) {
 				for (int i = 0; i < 3; i++) {
+					//Log.e("Roshan","This is happening");
 					putValueTrimSize(VALUE_PATHS[i], null, now,
 							event.values[i]);
 				}
@@ -90,6 +91,8 @@ public class GyroscopeSensor extends AbstractSwanSensor {
 
 	@Override
 	public final void register(String id, String valuePath, Bundle configuration, final Bundle httpConfiguration) {
+
+		super.register(id, valuePath,configuration,httpConfiguration);
 		updateAccuracy();
 	}
 

@@ -214,6 +214,7 @@ public class PolarHeartRate extends AbstractSwanSensor {
 	@Override
 	public final void register(final String id, final String valuePath,
 			final Bundle configuration, final Bundle httpConfiguration){// throws IOException {
+		super.register(id,valuePath,configuration,httpConfiguration);
 		if (!mBluetoothAdapter.isEnabled()) {
 			throw new IllegalStateException("Bluetooth is not enabled.");
 		}

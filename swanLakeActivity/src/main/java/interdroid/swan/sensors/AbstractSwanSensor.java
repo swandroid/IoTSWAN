@@ -43,6 +43,7 @@ public abstract class AbstractSwanSensor extends AbstractSensorBase{
 	 */
 	protected static String SENSOR_NAME;
 	protected ServerConnection serverConnection;
+	protected String registeredValuepath;
 	protected HashMap<String,Object> serverData = new HashMap<String,Object>();
 	protected Callback<Object> cb = new Callback<Object>() {
 		@Override
@@ -101,10 +102,11 @@ public abstract class AbstractSwanSensor extends AbstractSensorBase{
 
 		}
 
+		registeredValuepath = valuePath;
 
 		String server_storage = httpConfiguration.getString("server_storage","BLAH");
 
-		Log.e("Roshan","Server Storage is "+server_storage);
+		Log.e("Roshan", "Server Storage is " + server_storage);
 		if (server_storage.equals("TRUE")) {
 			Log.e("Roshan","Server Storage is true");
 			serverConnection = new ServerConnection(httpConfiguration);
@@ -127,14 +129,16 @@ public abstract class AbstractSwanSensor extends AbstractSensorBase{
 			final String id, final long now, final Object value /*, final int historySize*/) {
 		updateReadings(now);
 
-		if(serverConnection!=null){
-
-			serverData.clear();
-			serverData.put("id",id);
-			//serverData.put("channel",valuePath);
-			serverData.put("field1",value);
-			serverData.put("time",now);
-			serverConnection.useHttpMethod(serverData,cb);
+		if(registeredValuepath.contains(valuePath)) {
+			if (serverConnection != null) {
+				Log.e("Roshan", "server connection is not null");
+				serverData.clear();
+				serverData.put("id", id);
+				//serverData.put("channel",valuePath);
+				serverData.put("field1", value);
+				serverData.put("time", now);
+				serverConnection.useHttpMethod(serverData, cb);
+			}
 		}
 
 		try {

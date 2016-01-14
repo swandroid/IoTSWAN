@@ -45,6 +45,7 @@ public class StepDetectorSensor extends AbstractSwanSensor implements SensorEven
 	@Override
 	public void register(String id, String valuePath, Bundle configuration, final Bundle httpConfiguration){
 			//throws IOException {
+		super.register(id,valuePath,configuration,httpConfiguration);
 		updateAccuracy();
 	}
 	

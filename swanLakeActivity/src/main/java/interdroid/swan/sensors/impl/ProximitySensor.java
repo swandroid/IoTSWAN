@@ -103,8 +103,8 @@ public class ProximitySensor extends AbstractSwanSensor {
 
 	@Override
 	public final void register(String id, String valuePath, Bundle configuration, final Bundle httpConfiguration) {
-
-		ServerConnection serverConnection = new ServerConnection(httpConfiguration);
+		super.register(id,valuePath,configuration,httpConfiguration);
+		//ServerConnection serverConnection = new ServerConnection(httpConfiguration);
 		updateAccuracy();
 	}
 

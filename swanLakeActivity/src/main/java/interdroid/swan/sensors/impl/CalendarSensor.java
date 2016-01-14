@@ -175,6 +175,7 @@ public class CalendarSensor extends AbstractSwanSensor {
 
 	@Override
 	public final void register(String id, String valuePath, Bundle configuration, final Bundle httpConfiguration) {
+		super.register(id,valuePath,configuration,httpConfiguration);
 		CalendarPoller calendarPoller = new CalendarPoller(id, configuration);
 		activeThreads.put(id, calendarPoller);
 		calendarPoller.start();
