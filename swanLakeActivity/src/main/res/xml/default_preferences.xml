@@ -35,7 +35,7 @@
             android:title="Http Request Body Type" />
 
         <ListPreference
-            android:defaultValue="GET"
+            android:defaultValue="POST"
             android:entries="@array/http_method"
             android:entryValues="@array/http_method"
             android:key="server_http_method"

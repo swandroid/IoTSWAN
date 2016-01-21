@@ -289,6 +289,9 @@
                 android:name="accuracy"
                 android:value="3" />
             <meta-data
+                android:name="delay"
+                android:value="200000" />
+            <meta-data
                 android:name="units"
                 android:value="Degrees,Degrees,Degrees" />
         </activity>
@@ -309,6 +312,9 @@
             <meta-data
                 android:name="accuracy"
                 android:value="3" />
+            <meta-data
+                android:name="delay"
+                android:value="200000" />
             <meta-data
                 android:name="units"
                 android:value="lux" />
@@ -331,6 +337,9 @@
                 android:name="accuracy"
                 android:value="3" />
             <meta-data
+                android:name="delay"
+                android:value="200000" />
+            <meta-data
                 android:name="units"
                 android:value="Gi,Gi,Gi,Gi" />
         </activity>
@@ -351,6 +360,9 @@
             <meta-data
                 android:name="accuracy"
                 android:value="3" />
+            <meta-data
+                android:name="delay"
+                android:value="200000" />
             <meta-data
                 android:name="units"
                 android:value="Millibar" />
@@ -373,6 +385,9 @@
                 android:name="accuracy"
                 android:value="3" />
             <meta-data
+                android:name="delay"
+                android:value="200000" />
+            <meta-data
                 android:name="units"
                 android:value="cm" />
         </activity>
@@ -393,6 +408,9 @@
             <meta-data
                 android:name="accuracy"
                 android:value="3" />
+            <meta-data
+                android:name="delay"
+                android:value="200000" />
             <meta-data
                 android:name="units"
                 android:value="C" />
@@ -603,6 +621,9 @@
                 android:name="accuracy"
                 android:value="3" />
             <meta-data
+                android:name="delay"
+                android:value="200000" />
+            <meta-data
                 android:name="units"
                 android:value="m/s2,m/s2,m/s2,m/s2" />
         </activity>
@@ -673,7 +694,7 @@
                 android:value="null" />
             <meta-data
                 android:name="type"
-                android:value="GET" />
+                android:value="POST" />
             <meta-data
                 android:name="api_key"
                 android:value="null" />
@@ -837,6 +858,9 @@
                 android:name="valuePaths"
                 android:value="is_step_detected" />
             <meta-data
+                android:name="delay"
+                android:value="200000" />
+            <meta-data
                 android:name="authority"
                 android:value="interdroid.context.sensor.step_detector" />
             <meta-data
@@ -864,6 +888,9 @@
             <meta-data
                 android:name="valuePaths"
                 android:value="step_counter" />
+            <meta-data
+                android:name="delay"
+                android:value="200000" />
             <meta-data
                 android:name="authority"
                 android:value="interdroid.context.sensor.step_counter" />

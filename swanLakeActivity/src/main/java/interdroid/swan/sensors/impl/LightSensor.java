@@ -14,31 +14,27 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Toast;
 
 public class LightSensor extends AbstractSwanSensor {
 	public static final String TAG = "LightSensor";
-	
+
 	/**
 	 * The configuration activity for this sensor.
 	 * 
 	 * @author nick &lt;palmer@cs.vu.nl&gt;
 	 * 
 	 */
-	public static class ConfigurationActivity extends
-			AbstractConfigurationActivity {
+	public static class ConfigurationActivity extends AbstractConfigurationActivity {
 
 		@Override
 		public final int getPreferencesXML() {
 			return R.xml.light_preferences;
 		}
-
 	}
 
-	/** Value of ACCURACY must be one of SensorManager.SENSOR_DELAY_* */
+	/** Value of ACCURACY must be one of SensorManager.SENSOR_STATUS_ACCURACY_* */
 	public static final String ACCURACY = "accuracy";
-
-	//ServerConnection serverConnection;
-
 
 	public static final String LUX_FIELD = "lux";
 
@@ -53,9 +49,12 @@ public class LightSensor extends AbstractSwanSensor {
 		}
 
 		public void onSensorChanged(SensorEvent event) {
-			long now = System.currentTimeMillis();
 			if (event.sensor.getType() == Sensor.TYPE_LIGHT) {
-				putValueTrimSize(LUX_FIELD, null, now, event.values[0]);
+				long now = acceptSensorReading();
+				if (now >= 0) {
+					Log.d(TAG, "onSensorChanged: " + now + " val " + event.values[0]);
+					putValueTrimSize(LUX_FIELD, null, now, event.values[0]);
+				}
 			}
 		}
 	};
@@ -67,58 +66,41 @@ public class LightSensor extends AbstractSwanSensor {
 
 	@Override
 	public void initDefaultConfiguration(Bundle DEFAULT_CONFIGURATION) {
-		DEFAULT_CONFIGURATION.putInt(ACCURACY,
-				SensorManager.SENSOR_DELAY_NORMAL);
+		DEFAULT_CONFIGURATION.putInt(DELAY, normalizeSensorDelay(SensorManager.SENSOR_DELAY_NORMAL));
+		DEFAULT_CONFIGURATION.putInt(ACCURACY, SensorManager.SENSOR_STATUS_ACCURACY_HIGH);
 	}
 
 	@Override
 	public void onConnected() {
 		SENSOR_NAME = "Light Sensor";
 		sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
-		List<Sensor> sensorList = sensorManager
-				.getSensorList(Sensor.TYPE_LIGHT);
+		List<Sensor> sensorList = sensorManager.getSensorList(Sensor.TYPE_LIGHT);
 		if (sensorList.size() > 0) {
 			lightSensor = sensorList.get(0);
 		} else {
-			Log.e(TAG, "No lightSensor found on device!");
+			Toast.makeText(getApplicationContext(), "No lightSensor found on device!", Toast.LENGTH_SHORT).show();
+			Log.d(TAG, "No lightSensor found on device!");
 		}
 	}
 
 	@Override
-	public final void register(String id, String valuePath, Bundle configuration, Bundle httpConfiguration) {
-
-		super.register(id,valuePath,configuration,httpConfiguration);
-
-		updateAccuracy();
+	public final void register(String id, String valuePath, Bundle configuration, final Bundle httpConfiguration) {
+		super.register(id, valuePath, configuration, httpConfiguration);
+		updateDelay();
 	}
 
-	private void updateAccuracy() {
+	private void updateDelay() {
 		sensorManager.unregisterListener(sensorEventListener);
-		if (registeredConfigurations.size() > 0) {
-
-			int highestAccuracy = mDefaultConfiguration.getInt(ACCURACY);
-			for (Bundle configuration : registeredConfigurations.values()) {
-				if (configuration == null) {
-					continue;
-				}
-				if (configuration.containsKey(ACCURACY)) {
-					highestAccuracy = Math
-							.min(highestAccuracy,
-									Integer.parseInt(configuration
-											.getString(ACCURACY)));
-				}
-			}
-			highestAccuracy = Math.max(highestAccuracy,
-					SensorManager.SENSOR_DELAY_FASTEST);
-			sensorManager.registerListener(sensorEventListener, lightSensor,
-					highestAccuracy);
+		int delay = getSensorDelay();
+		if (delay >= 0) {
+			sensorManager.registerListener(sensorEventListener, lightSensor, delay);
+			Log.d(TAG, "delay set to " + delay);
 		}
-
 	}
 
 	@Override
 	public final void unregister(String id) {
-		updateAccuracy();
+		updateDelay();
 	}
 
 	@Override
@@ -126,7 +108,7 @@ public class LightSensor extends AbstractSwanSensor {
 		sensorManager.unregisterListener(sensorEventListener);
 		super.onDestroySensor();
 	}
-	
+
 	@Override
 	public float getCurrentMilliAmpere() {
 		return lightSensor.getPower();

@@ -32,7 +32,7 @@ public class SensorValueExpression implements ValueExpression {
 			mHttpConfig = new Bundle();
 		}
 
-		Log.e("Roshan","SensorValueExpression constructor called");
+		Log.e("Roshan", "SensorValueExpression constructor called; entity " + entity + " valuePath " + valuePath);
 
 	}
 
